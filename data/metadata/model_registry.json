@@ -1,0 +1,17 @@
+{
+  "Baseline": {
+    "ODIR": "models/baseline/baseline_lodo_test_on_odir.pth",
+    "RFMiD v1": "models/baseline/baseline_lodo_test_on_rfmid_v1.pth",
+    "RFMiD v2": "models/baseline/baseline_lodo_test_on_rfmid_v2.pth"
+  },
+  "DG": {
+    "ODIR": "models/dg/mixup_lodo_test_on_odir.pth",
+    "RFMiD v1": "models/dg/coral_lodo_test_on_rfmid_v1.pth",
+    "RFMiD v2": "models/dg/dann_lodo_test_on_rfmid_v2.pth"
+  },
+  "Hybrid": {
+    "ODIR": "models/hybrid/hybrid_lodo_test_on_odir.pth",
+    "RFMiD v1": "models/hybrid/hybrid_lodo_test_on_rfmid_v1.pth",
+    "RFMiD v2": "models/hybrid/hybrid_lodo_test_on_rfmid_v2.pth"
+  }
+}

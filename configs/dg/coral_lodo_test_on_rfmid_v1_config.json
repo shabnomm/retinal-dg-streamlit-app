@@ -1,0 +1,18 @@
+{
+  "seed": 42,
+  "method": "CORAL_DG",
+  "test_domain": "RFMiD_v1",
+  "train_domains": "ODIR + RFMiD_v2",
+  "val_strategy": "RFMiD_v2_val (OOD proxy)",
+  "model": "ResNet50 (layer1+layer2 frozen)",
+  "head": "2048->256->4",
+  "dropout": 0.5,
+  "weight_decay": 0.0005,
+  "loss": "FocalBCE(gamma=2.0)+LabelSmoothing(0.1)+CORAL",
+  "scheduler": "LinearWarmup(5ep)+CosineAnnealing",
+  "pos_weight": "per-domain averaged",
+  "threshold": "fixed 0.5",
+  "coral_lambda": 1.0,
+  "coral_feature_dim": 2048,
+  "note": "CORAL penalty at backbone output (2048-dim). Per-domain loaders with drop_last=True."
+}

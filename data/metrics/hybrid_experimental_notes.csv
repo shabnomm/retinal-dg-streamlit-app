@@ -1,0 +1,2 @@
+held_out_dataset,model,accuracy,f1,auc,precision,recall,status,note
+ODIR,Hybrid,0.3074,0.2794,0.6144,0.3333,0.5624,Experimental,"The hybrid result on ODIR remains in an experimental stage. Due to limited dataset size, domain imbalance, and the difficulty of unseen-domain generalization, the current result is not yet satisfactory. This case is presented separately from the main hybrid summary. Future work will focus on improving this setting using larger and more diverse datasets."

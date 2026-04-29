@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "method": "DANN_DG",
+  "test_domain": "RFMiD_v2",
+  "train_domains": "ODIR + RFMiD_v1",
+  "val_strategy": "RFMiD_v1_val (OOD proxy)",
+  "model": "ResNet50 (layer1+layer2 frozen)",
+  "head": "2048->256->4",
+  "domain_disc": "GRL->Linear(2048,256)->ReLU->LayerNorm->Linear(256,2)",
+  "grl_placement": "backbone output (2048-dim)",
+  "grl_schedule": "Ganin et al. progressive 0->1",
+  "dropout": 0.5,
+  "weight_decay": 0.0005,
+  "loss": "FocalBCE(gamma=2.0)+LabelSmoothing(0.1)+DANN",
+  "scheduler": "LinearWarmup(5ep)+CosineAnnealing",
+  "pos_weight": "per-domain averaged",
+  "threshold": "fixed 0.5",
+  "dann_lambda": 1.0,
+  "dann_lr_mult": 10.0
+}
